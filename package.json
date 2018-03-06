@@ -7,7 +7,7 @@
     "json-server": "^0.12.1"
   },
   "scripts": {
-    "server": "json-server --watch ./endpoints/db.json -p 84"
+    "server": "json-server --watch ./endpoints/db.json -p 84 --static ./endpoints/files"
   },
   "repository": {
     "type": "git",
