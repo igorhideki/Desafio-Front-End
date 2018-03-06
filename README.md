@@ -12,7 +12,7 @@ Com base no protótipo, implemente a Listagem de Comunicados. Sua aplicação de
 O servidor também servirá arquivos estáticos que deverão ser acessados quando o comunicado possuir arquivos (campo *files* do comunicado).
 
 ### Descrição do módulo:
-A listagem de comunicados servirá como agregador de comunicados do sistema, hoje existem 4 tipos de comunicados:
+A listagem de comunicados servirá como agregador de comunicados do sistema, hoje existem 4 categorias de comunicados:
 - Informativos SUN
 - Força de Vendas
 - Vivo Ligado
@@ -20,13 +20,13 @@ A listagem de comunicados servirá como agregador de comunicados do sistema, hoj
 
 O módulo deverá exibir todos os comunicados disponíveis para aquele usuário. O usuário poderá filtrar os comunicados através das categorias. Ao clicar em um comunicado o seu conteúdo deverá ser exibido e o mesmo deverá ser marcado como lido.
 
->  🤔 hmmm, talvez o desginer tenha esquecido de fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
+>  🤔 hmmm, talvez o designer tenha esquecido de fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
 
-### Requisitos
+### Diferenciais
 - Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste ( Jest, Mocha, Jasmine etc).
 - O projeto deve ser criado com um framework Javascript orientado a componentes (Vue, React, Angular etc). 
-- Sua aplicação deve consumir os dados fornecido pela api fake.
-- Utilize um framework css (Sass, Stylus, Less etc) ou estruture seu css com alguma metodologia (OOCSS, BEM, SMACSS etc).
+- Sua aplicação deve consumir os dados fornecido pela api.
+- Utilize um framework CSS (Sass, Stylus, Less etc) ou estruture seu CSS com alguma metodologia (OOCSS, BEM, SMACSS etc).
 - Sua aplicação deve manter o estado consistente, ou seja, uma vez lido, um comunicado deverá ser marcado como lido e manter este estado. (Utilize alguma forma de storage, ou o próprio json-server para editar o comunicado)
 - Crie um passo-a-passo de como utilizar sua aplicação (scripts de inicialização, build etc).
 
@@ -44,7 +44,7 @@ Ao terminar faça um pull request! :octocat:
 > 💡 Caso tenha dúvida não deixe de perguntar
 
 ### Dicas
-- Confira os dados dos endpoints na url http://localhost:84/*endpoint*, alguns dados terão que ser tratados!
+- Confira os dados dos endpoints na url http://localhost:84/endpoint, alguns dados terão que ser tratados!
 - O módulo deverá ser responsivo para uma tela desktop, parta do princípio mobile first
 - Estruture bem o seu código e sua arquitetura
 - Pense sempre que alguém irá ler seu código e que os requisitos podem mudar
