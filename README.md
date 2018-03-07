@@ -20,13 +20,13 @@ A listagem de comunicados servirá como agregador de comunicados do sistema, hoj
 
 O módulo deverá exibir todos os comunicados disponíveis para aquele usuário. O usuário poderá filtrar os comunicados através das categorias. Ao clicar em um comunicado o seu conteúdo deverá ser exibido e o mesmo deverá ser marcado como lido.
 
->  🤔 hmmm, talvez o designer tenha esquecido de fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
+> será necessário fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
 
 ### Diferenciais
 - Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste ( Jest, Mocha, Jasmine etc).
 - O projeto deve ser criado com um framework Javascript orientado a componentes (Vue, React, Angular etc). 
 - Sua aplicação deve consumir os dados fornecido pela api.
-- Utilize um framework CSS (Sass, Stylus, Less etc) ou estruture seu CSS com alguma metodologia (OOCSS, BEM, SMACSS etc).
+- Utilize um pré-processador de CSS (Sass, Stylus, Less etc) ou estruture seu CSS com alguma metodologia (OOCSS, BEM, SMACSS etc).
 - Sua aplicação deve manter o estado consistente, ou seja, uma vez lido, um comunicado deverá ser marcado como lido e manter este estado. (Utilize alguma forma de storage, ou o próprio json-server para editar o comunicado)
 - Crie um passo-a-passo de como utilizar sua aplicação (scripts de inicialização, build etc).
 
