@@ -22,14 +22,17 @@ O módulo deverá exibir todos os comunicados disponíveis para aquele usuário.
 
 > será necessário fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
 
-### Diferenciais
-- Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste (Jest, Mocha, Jasmine etc).
+### Requisitos Obrigatórios
+- Não utilize um gerador de projeto (yeoman) ou cli de configuração (vue-cli, react-create-app etc)
+- Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste (Jest, Mocha, Jasmine etc)
 - O projeto deve ser criado com um framework Javascript orientado a componentes (Vue, React, Angular etc). 
 - Sua aplicação deve consumir os dados fornecido pela api.
+- Utilize um linter de JS
+
+### Diferenciais
 - Utilize um pré-processador de CSS (Sass, Stylus, Less etc) ou estruture seu CSS com alguma metodologia (OOCSS, BEM, SMACSS etc).
 - Sua aplicação deve manter o estado consistente, ou seja, uma vez lido, um comunicado deverá ser marcado como lido e manter este estado. (Utilize alguma forma de storage, ou o próprio json-server para editar o comunicado)
 - Crie um passo-a-passo de como utilizar sua aplicação (scripts de inicialização, build etc).
-- Utilize um linter de JS
 
 ### Passo-a-passo
 1. Faça um **fork** deste repositório para sua conta pessoal do github
