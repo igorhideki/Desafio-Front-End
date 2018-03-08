@@ -24,7 +24,6 @@ O módulo deverá exibir todos os comunicados disponíveis para aquele usuário.
 
 ### Requisitos Obrigatórios
 - Não utilize um gerador de projeto (yeoman) ou cli de configuração (vue-cli, react-create-app etc)
-- Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste (Jest, Mocha, Jasmine etc)
 - O projeto deve ser criado com um framework Javascript orientado a componentes (Vue, React, Angular etc)
 - Sua aplicação deve consumir os dados fornecido pela api.
 - Utilize um linter de JS
@@ -35,6 +34,7 @@ O módulo deverá exibir todos os comunicados disponíveis para aquele usuário.
 - Sua aplicação deve manter o estado consistente, ou seja, uma vez lido, um comunicado deverá ser marcado como lido e manter este estado. (Utilize alguma forma de storage, ou o próprio json-server para editar o comunicado)
 - Crie um passo-a-passo de como utilizar sua aplicação (scripts de inicialização, build etc)
 - Utilize ES6
+- Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste (Jest, Mocha, Jasmine etc)
 
 ### Passo-a-passo
 1. Faça um **fork** deste repositório para sua conta pessoal do github
