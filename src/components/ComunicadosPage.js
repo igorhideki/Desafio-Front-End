@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
+import CategoriaFilters from './CategoriaFilters';
+import api from '../requests/apis';
 
-const ComunicadosPage = () => (
-  <h2>Lista de comunicados</h2>
-);
+class ComunicadosPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: false,
+      categorias: [],
+      comunicados: []
+    };
+  }
+
+  componentDidMount () {
+    this.setState({ isLoading: true });
+    api.loadCategorias()
+      .then(res => {
+        this.setState(() => ({ isLoading: false, categorias: res.data }));
+      });
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <CategoriaFilters categorias={this.state.categorias}/>
+      </div>
+    );
+  }
+} 
 
 export default ComunicadosPage;
