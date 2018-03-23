@@ -1,0 +1,24 @@
+.filter {
+  display: block;
+  font-size: 1.4rem;  
+}
+
+.filter__label {
+  font-size: $s-size;
+  display: block;
+  color: $gray;
+  margin: $m-size 0 $xs-size;
+}
+
+.filter__item {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid lighten($gray, 20%);
+  border-radius: 0.6rem;
+  display: inline-block;
+  color: darken($gray, 10%);
+
+  & + & {
+    margin-left: $s-size;
+  }
+}

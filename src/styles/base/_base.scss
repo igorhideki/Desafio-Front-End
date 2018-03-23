@@ -4,9 +4,10 @@ html {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: $m-size;
+  font-size: $s-size;
   color: $dark-gray;
   background-color: $light-gray;
+  padding-top: $xxl-size;
 }
 
 button {

@@ -1,0 +1,17 @@
+.header {
+  height: $xxl-size;
+  background: $purple;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+  padding: 0 $s-size;
+}
+
+.header__title {
+  font-weight: bold;
+  font-size: $m-size;
+  line-height: $xxl-size;
+}
