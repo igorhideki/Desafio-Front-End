@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ComunicadoItemFile from './ComunicadoItemFile';
 
 const handleCategoriaItem = (type) => {
   switch (type) {
@@ -22,6 +23,11 @@ const ComunicadoItem = (props) => (
       <span className="comunicados__title">{props.title}</span>
       <span className="comunicados__id">{props.id}</span>
     </div>
+    <div className="row">
+      {props.files && props.files.length > 0 && props.files.map((file) => {
+        return <ComunicadoItemFile key={file.name} {...file} />;
+      })}
+    </div>
     <div className="comunicados__row">
       <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
       <span className="comunicados__date">{props.date}</span>
@@ -37,11 +43,11 @@ ComunicadoItem.propTypes = {
   description: PropTypes.string.isRequired,
   fullDescription: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  file: PropTypes.shape({
+  files: PropTypes.arrayOf(PropTypes.shape({
     type: PropTypes.string,
     name: PropTypes.string,
     url: PropTypes.string,
-  })
+  }))
 };
 
 export default ComunicadoItem;
