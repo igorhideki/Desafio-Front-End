@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Header = () => (
-  <div>
-    <h1>Comunicados App</h1>
+  <div className="header">
+    <span className="header__title">Comunicados</span>
   </div>
 );
 
