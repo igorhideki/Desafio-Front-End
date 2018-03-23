@@ -28,20 +28,43 @@
   }
 }
 
+.comunicados__item--blue:before {
+  background: $blue;
+}
+
+.comunicados__item--green:before {
+  background: $green;
+}
+
+.comunicados__item--purple:before {
+  background: $purple;
+}
+
+.comunicados__item--orange:before {
+  background: $orange;
+}
+
+.comunicados__row {
+  display: flex;
+}
+
 .comunicados__title {
   font-weight: bold;
-  font-size: 1.4rem;  
+  font-size: $s-size;
   margin-bottom: $xs-size;
 }
 
 .comunicados__id {
   @extend .comunicados__title;
+  margin-left: auto;
+}
+
+.comunicados__type {
+  font-size: 1.4rem;
+  color: lighten($dark-gray, 20%);
 }
 
 .comunicados__date {
-  font-size: 1.4rem;
-  font-weight: 300;
-}
-.comunicados__type {
-  @extend .comunicados__date;
+  @extend .comunicados__type;
+  margin-left: auto;
 }
