@@ -1,15 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+const handleCategoriaItem = (type) => {
+  switch (type) {
+    case 0:
+      return { color: 'comunicados__item--orange', name: 'Informativos SUN' };
+    case 1:
+      return { color: 'comunicados__item--blue', name: 'Força de Vendas' };
+    case 2:
+      return { color: 'comunicados__item--green', name: 'Vivo Ligado' };
+    case 3:
+      return { color: 'comunicados__item--purple', name: 'Turbine Suas Vendas' };
+    default:
+      return { color: '', name: '' };
+  }
+};
+
 const ComunicadoItem = (props) => (
-  <li className="comunicados__item">
-    <div className="comunicados__indicador"></div>
-    <div className="d-flex">
-      <span className="comunicados__title mr-auto">{props.title}</span>
+  <li className={`comunicados__item ${handleCategoriaItem(props.type).color}`}>
+    <div className="comunicados__row">
+      <span className="comunicados__title">{props.title}</span>
       <span className="comunicados__id">{props.id}</span>
     </div>
-    <div className="d-flex">
-      <span className="comunicados__type mr-auto">{props.type}</span>
+    <div className="comunicados__row">
+      <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
       <span className="comunicados__date">{props.date}</span>
     </div>
   </li>
