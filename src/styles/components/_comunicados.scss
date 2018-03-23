@@ -28,6 +28,14 @@
   }
 }
 
+.comunicados__item--seen {
+  background-color: darken(white, 8%);
+
+  &:before {
+    opacity: 0.5;
+  }
+}
+
 .comunicados__item--blue:before {
   background: $blue;
 }

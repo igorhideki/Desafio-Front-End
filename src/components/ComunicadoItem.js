@@ -17,8 +17,12 @@ const handleCategoriaItem = (type) => {
   }
 };
 
+const handleComunicadoSeen = (seen) => {
+  return seen ? 'comunicados__item--seen': '';
+};
+
 const ComunicadoItem = (props) => (
-  <li className={`comunicados__item ${handleCategoriaItem(props.type).color}`}>
+  <li className={`comunicados__item ${handleComunicadoSeen(props.seen)} ${handleCategoriaItem(props.type).color}`}>
     <div className="comunicados__row">
       <span className="comunicados__title">{props.title}</span>
       <span className="comunicados__id">{props.id}</span>
