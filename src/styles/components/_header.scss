@@ -8,10 +8,25 @@
   right: 0;
   box-shadow: 0 2px 5px rgba(0,0,0,.26);
   padding: 0 $s-size;
+  display: flex;
 }
 
 .header__title {
   font-weight: bold;
   font-size: $m-size;
   line-height: $xxl-size;
+}
+
+.header__icon-menu {
+  font-size: 2rem;
+  margin-right: $m-size;
+  opacity: 0.6;
+  line-height: $xxl-size;  
+}
+
+.header__icon-search {
+  font-size: 2rem;
+  margin-left: auto;
+  opacity: 0.6;
+  line-height: $xxl-size;  
 }
