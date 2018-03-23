@@ -5,7 +5,8 @@ const api = axios.create({
   baseURL: base
 });
 const apis = {
-  loadCategorias: () => api.get('tiposComunicados')
+  loadCategorias: () => api.get('tiposComunicados'),
+  loadComunicados: () => api.get('comunicados')
 };
 
 export default apis;
