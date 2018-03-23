@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CategoriaFilters from './CategoriaFilters';
 import ComunicadoList from './ComunicadoList';
 import api from '../requests/apis';
+import selectComunicados from '../selectors/comunicados';
 
 class ComunicadosPage extends Component {
   constructor(props) {
@@ -9,8 +10,12 @@ class ComunicadosPage extends Component {
     this.state = {
       isLoading: false,
       categorias: [],
-      comunicados: []
+      comunicados: [],
+      filters: {
+        type: -1
+      }
     };
+    this.handleSelectCategoria = this.handleSelectCategoria.bind(this);
   }
 
   componentDidMount () {
@@ -25,11 +30,19 @@ class ComunicadosPage extends Component {
       });
   }
 
+  handleSelectCategoria(type) {
+    if (this.state.filters.type === type) {
+      this.setState(() => ({ filters: { type: -1 } }));
+    } else {
+      this.setState(() => ({ filters: { type } }));
+    }
+  }
+
   render() {
     return (
       <div className="container">
-        <CategoriaFilters categorias={this.state.categorias}/>
-        <ComunicadoList comunicados={this.state.comunicados}/>
+        <CategoriaFilters categorias={this.state.categorias} handleSelectCategoria={this.handleSelectCategoria} filterActive={this.state.filters.type}/>
+        <ComunicadoList comunicados={selectComunicados(this.state.comunicados, this.state.filters)}/>
       </div>
     );
   }
