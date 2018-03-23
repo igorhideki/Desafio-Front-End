@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ComunicadoItem from './ComunicadoItem';
 
 const ComunicadoList = (props) => (
-  <ul>
+  <ul className="comunicados">
     {
       props.comunicados && props.comunicados.map((comunicado) => (
         <ComunicadoItem key={comunicado.id} {...comunicado}/>

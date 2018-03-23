@@ -1,0 +1,47 @@
+.comunicados {
+  list-style: none;
+  padding: 0;
+}
+
+.comunicados__item {
+  background: white;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  padding: 1.2rem 1.2rem 1.2rem $m-size;
+  position: relative;
+
+  & + & {
+    margin-top: $s-size; 
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $xs-size;
+    height: 100%;
+    background: #000;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    
+  }
+}
+
+.comunicados__title {
+  font-weight: bold;
+  font-size: 1.4rem;  
+  margin-bottom: $xs-size;
+}
+
+.comunicados__id {
+  @extend .comunicados__title;
+}
+
+.comunicados__date {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.comunicados__type {
+  @extend .comunicados__date;
+}

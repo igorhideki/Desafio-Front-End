@@ -2,11 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ComunicadoItem = (props) => (
-  <li>
-    <h4>{props.title}</h4>
-    <span>{props.type}</span>
-    <span>{props.date}</span>
-    <p>{props.description}</p>
+  <li className="comunicados__item">
+    <div className="comunicados__indicador"></div>
+    <div className="d-flex">
+      <span className="comunicados__title mr-auto">{props.title}</span>
+      <span className="comunicados__id">{props.id}</span>
+    </div>
+    <div className="d-flex">
+      <span className="comunicados__type mr-auto">{props.type}</span>
+      <span className="comunicados__date">{props.date}</span>
+    </div>
   </li>
 );
 
