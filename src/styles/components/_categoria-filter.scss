@@ -26,6 +26,10 @@
   & + & {
     margin-left: $s-size;
   }
+
+  &:hover {
+    color: $dark-gray;
+  }
 }
 
 .filter__item--active {

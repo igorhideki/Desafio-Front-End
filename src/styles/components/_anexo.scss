@@ -20,7 +20,12 @@
 
 .anexo__link {
   @extend .anexo__icon;
+  transition: all 0.16s linear;
   margin-left: auto;
   margin-right: 0;
   cursor: pointer;
+
+  &:hover {
+    color: lighten($dark-gray, 10%);
+  }
 }
