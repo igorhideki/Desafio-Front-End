@@ -24,7 +24,9 @@ const apis = {
       link.click();
       link.remove();
     });
-  }
+  },
+  loadComunicadoById: (id) => api.get(`comunicados/${id}`),
+  updateComunicado: (id, update) => api.put(`comunicados/${id}`, update)
 };
 
 export default apis;
