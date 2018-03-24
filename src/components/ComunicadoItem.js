@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import ComunicadoItemFile from './ComunicadoItemFile';
 
 const handleCategoriaItem = (type) => {
@@ -21,23 +22,28 @@ const handleComunicadoSeen = (seen) => {
   return seen ? 'comunicados__item--seen': '';
 };
 
-const ComunicadoItem = (props) => (
-  <li className={`comunicados__item ${handleComunicadoSeen(props.seen)} ${handleCategoriaItem(props.type).color}`}>
+const handleOnClickItem = (props) => {
+  props.history.push(`details/${props.id}`);
+};
+
+const ComunicadoItem = withRouter((props) => (
+  <li
+    className={`comunicados__item ${handleComunicadoSeen(props.seen)} ${handleCategoriaItem(props.type).color}`}
+    onClick={() => handleOnClickItem(props)}
+  >
     <div className="comunicados__row">
       <span className="comunicados__title">{props.title}</span>
       <span className="comunicados__id">{props.id}</span>
     </div>
-    <div className="row">
-      {props.files && props.files.length > 0 && props.files.map((file) => {
-        return <ComunicadoItemFile key={file.name} {...file} />;
-      })}
-    </div>
+    {props.files && props.files.length > 0 && props.files.map((file) => {
+      return <ComunicadoItemFile key={file.name} {...file} />;
+    })}
     <div className="comunicados__row">
       <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
       <span className="comunicados__date">{props.date}</span>
     </div>
   </li>
-);
+));
 
 ComunicadoItem.propTypes = {
   id: PropTypes.number.isRequired,
