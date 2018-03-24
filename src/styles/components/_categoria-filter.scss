@@ -3,7 +3,7 @@
   font-size: 1.4rem;
   white-space: nowrap;
   overflow-x: auto;
-  padding: $m-size 0;
+  padding-bottom: $m-size;
 }
 
 .filter__label {
@@ -14,7 +14,7 @@
 }
 
 .filter__item {
-  transition: all 0.16s linear;
+  transition: $transition-default;
   padding: 1rem;
   background-color: white;
   border: 1px solid lighten($gray, 28%);
@@ -34,4 +34,5 @@
 
 .filter__item--active {
   background-color: darken($light-gray, 8%);
+  box-shadow: inset 0 0 2px rgba(0,0,0,.1);
 }
