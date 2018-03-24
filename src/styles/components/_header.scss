@@ -18,10 +18,15 @@
 }
 
 .header__icon-menu {
+  transition: $transition-default;
   font-size: 2rem;
   margin-right: $m-size;
   opacity: 0.6;
-  line-height: $xxl-size;  
+  line-height: $xxl-size;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .header__icon-search {
