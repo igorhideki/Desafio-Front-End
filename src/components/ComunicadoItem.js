@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import { withRouter } from 'react-router-dom';
 import ComunicadoItemFile from './ComunicadoItemFile';
 
@@ -26,6 +27,11 @@ const handleOnClickItem = (props) => {
   props.history.push(`details/${props.id}`);
 };
 
+const handleFormatDate = (date) => {
+  const parseDate = moment(date, 'YYYY-MM-DD HH:mm');
+  return moment(parseDate).format('DD/MM/YYYY - HH[h]mm');
+};
+
 const ComunicadoItem = withRouter((props) => (
   <li
     className={`comunicados__item ${handleComunicadoSeen(props.seen)} ${handleCategoriaItem(props.type).color}`}
@@ -40,7 +46,7 @@ const ComunicadoItem = withRouter((props) => (
     })}
     <div className="comunicados__row">
       <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
-      <span className="comunicados__date">{props.date}</span>
+      <span className="comunicados__date">{handleFormatDate(props.date)}</span>
     </div>
   </li>
 ));
