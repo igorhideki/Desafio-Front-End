@@ -4,6 +4,7 @@
   "description": "Desafio para desenvolvedores front-end",
   "dependencies": {
     "axios": "^0.18.0",
+    "moment": "^2.21.0",
     "normalize.css": "^8.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
