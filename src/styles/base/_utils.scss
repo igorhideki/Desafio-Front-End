@@ -1,7 +1,11 @@
-.d-flex {
-  display: flex;
+.mt-xs {
+  margin-top: $xs-size;
 }
 
-.mr-auto {
-  margin-right: auto;
+.mt-s {
+  margin-top: $s-size;
+}
+
+.mt-m {
+  margin-top: $m-size;
 }
