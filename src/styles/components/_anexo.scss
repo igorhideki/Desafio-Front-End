@@ -20,7 +20,7 @@
 
 .anexo__link {
   @extend .anexo__icon;
-  transition: all 0.16s linear;
+  transition: $transition-default;
   margin-left: auto;
   margin-right: 0;
   cursor: pointer;
