@@ -34,7 +34,7 @@
 
 .menu__item {
   font-weight: bold;
-  padding: $xs-size $s-size; 
+  padding: 1.4rem $s-size; 
 }
 
 .menu__link {
@@ -45,6 +45,10 @@
   &:hover {
     color: $dark-gray;
   }
+}
+
+.menu__icon-link {
+  margin-right: $xs-size;
 }
 
 .menu__link--active {

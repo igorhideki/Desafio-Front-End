@@ -32,10 +32,16 @@ class Header extends Component {
           </div>
           <ul className="menu__list">
             <li className="menu__item">
-              <NavLink className="menu__link" activeClassName="menu__link--active" to="/" onClick={() => this.handleCloseMenu()} exact>Home</NavLink>
+              <NavLink className="menu__link" activeClassName="menu__link--active" to="/" onClick={() => this.handleCloseMenu()} exact>
+                <i className="fas fa-home fa-fw menu__icon-link"></i>
+                Home
+              </NavLink>
             </li>
             <li className="menu__item">
-              <NavLink className="menu__link" activeClassName="menu__link--active" to="/about" onClick={() => this.handleCloseMenu()}>About</NavLink>
+              <NavLink className="menu__link" activeClassName="menu__link--active" to="/about" onClick={() => this.handleCloseMenu()}>
+                <i className="fas fa-info-circle fa-fw menu__icon-link"></i>
+                About
+              </NavLink>
             </li>
           </ul>
         </nav>
