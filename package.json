@@ -19,10 +19,14 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-html": "^4.0.2",
     "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3",
     "json-server": "^0.12.1",
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
@@ -36,7 +40,8 @@
     "start:dist": "live-server ./public --port=8080",
     "start:db": "json-server --watch ./endpoints/db.json -p 3001 --static ./endpoints/files",
     "build": "webpack -p --env production",
-    "build:dev": "webpack"
+    "build:dev": "webpack",
+    "test": "jest --config=jest.config.json"
   },
   "repository": {
     "type": "git",
