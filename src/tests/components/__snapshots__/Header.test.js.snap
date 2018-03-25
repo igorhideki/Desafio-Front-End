@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<div>
+  <header
+    className="header"
+  >
+    <span
+      className="header__icon-menu"
+      id="menu-toggler"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-bars fa-fw"
+      />
+    </span>
+    <span
+      className="header__title"
+    >
+      Comunicados
+    </span>
+    <span
+      className="header__icon-search"
+    >
+      <i
+        className="fas fa-search fa-fw"
+      />
+    </span>
+  </header>
+  <nav
+    className="menu"
+  >
+    <div
+      className="menu__brand"
+    >
+      <span>
+        Comunicados
+      </span>
+    </div>
+    <ul
+      className="menu__list"
+    >
+      <li
+        className="menu__item"
+      >
+        <NavLink
+          activeClassName="menu__link--active"
+          ariaCurrent="true"
+          className="menu__link"
+          exact={true}
+          onClick={[Function]}
+          to="/"
+        >
+          <i
+            className="fas fa-home fa-fw menu__icon-link"
+          />
+          Home
+        </NavLink>
+      </li>
+      <li
+        className="menu__item"
+      >
+        <NavLink
+          activeClassName="menu__link--active"
+          ariaCurrent="true"
+          className="menu__link"
+          onClick={[Function]}
+          to="/about"
+        >
+          <i
+            className="fas fa-info-circle fa-fw menu__icon-link"
+          />
+          About
+        </NavLink>
+      </li>
+    </ul>
+  </nav>
+  <div
+    className="overlay"
+    id="overlay"
+    onClick={[Function]}
+  />
+</div>
+`;
