@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ComunicadoDetailsItem 1`] = `
+<div
+  className="comunicados__item comunicados__item--no-pointer comunicados__item--blue"
+>
+  <div
+    className="comunicados__row"
+  >
+    <span
+      className="comunicados__title"
+    >
+      Novos Serviços
+    </span>
+    <span
+      className="comunicados__id"
+    >
+      3
+    </span>
+  </div>
+  <ComunicadoItemFile
+    key="Material de divulgação"
+    name="Material de divulgação"
+    type="image/*"
+    url="logob4.png"
+  />
+  <div
+    className="comunicados__row"
+  >
+    <span
+      className="comunicados__type"
+    >
+      Força de Vendas
+    </span>
+    <span
+      className="comunicados__date"
+    >
+      02/05/2018 - 18h30
+    </span>
+  </div>
+  <div
+    className="mt-m"
+  >
+    <p
+      className="comunicados__subtitle"
+    >
+      Resumo:
+    </p>
+    <p
+      className="comunicados__description"
+    >
+      Novos serviços, clique para visualizar o material de divulgação.
+    </p>
+    <p
+      className="comunicados__subtitle"
+    >
+      Descrição:
+    </p>
+    <p
+      className="comunicados__description"
+    >
+      Novos serviços, clique para visualizar o material de divulgação.
+    </p>
+  </div>
+</div>
+`;

@@ -24,41 +24,39 @@ const handleFormatDate = (date) => {
 };
 
 const ComunicadoDetailsItem = (props) => (
-  <div className={`comunicados__item comunicados__item--no-pointer ${handleCategoriaItem(props.comunicado.type).color}`}>
+  <div className={`comunicados__item comunicados__item--no-pointer ${handleCategoriaItem(props.type).color}`}>
     <div className="comunicados__row">
-      <span className="comunicados__title">{props.comunicado.title}</span>
-      <span className="comunicados__id">{props.comunicado.id}</span>
+      <span className="comunicados__title">{props.title}</span>
+      <span className="comunicados__id">{props.id}</span>
     </div>
-    {props.comunicado.files && props.comunicado.files.length > 0 && props.comunicado.files.map((file) => {
+    {props.files && props.files.length > 0 && props.files.map((file) => {
       return <ComunicadoItemFile key={file.name} {...file} />;
     })}
     <div className="comunicados__row">
-      <span className="comunicados__type">{handleCategoriaItem(props.comunicado.type).name}</span>
-      <span className="comunicados__date">{handleFormatDate(props.comunicado.date)}</span>
+      <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
+      <span className="comunicados__date">{handleFormatDate(props.date)}</span>
     </div>
     <div className="mt-m">
-      {props.comunicado.description !== '' && <p className="comunicados__subtitle">Resumo:</p>}
-      <p className="comunicados__description">{props.comunicado.description}</p>
-      {props.comunicado.description !== '' && <p className="comunicados__subtitle">Descrição:</p>}
-      <p className="comunicados__description">{props.comunicado.fullDescription}</p>
+      {props.description !== '' && <p className="comunicados__subtitle">Resumo:</p>}
+      <p className="comunicados__description">{props.description}</p>
+      {props.description !== '' && <p className="comunicados__subtitle">Descrição:</p>}
+      <p className="comunicados__description">{props.fullDescription}</p>
     </div>
   </div>
 );
 
 ComunicadoDetailsItem.propTypes = {
-  comunicado: PropTypes.shape({
-    id: PropTypes.number,
-    title: PropTypes.string,
-    date: PropTypes.string,
-    description: PropTypes.string,
-    fullDescription: PropTypes.string,
-    type: PropTypes.number,
-    files: PropTypes.arrayOf(PropTypes.shape({
-      type: PropTypes.string,
-      url: PropTypes.string,
-      name: PropTypes.string
-    }))
-  })
+  id: PropTypes.number,
+  title: PropTypes.string,
+  date: PropTypes.string,
+  description: PropTypes.string,
+  fullDescription: PropTypes.string,
+  type: PropTypes.number,
+  files: PropTypes.arrayOf(PropTypes.shape({
+    type: PropTypes.string,
+    url: PropTypes.string,
+    name: PropTypes.string
+  }))
 };
 
 export default ComunicadoDetailsItem;
