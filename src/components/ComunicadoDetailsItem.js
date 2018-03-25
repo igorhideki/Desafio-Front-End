@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import ComunicadoItemFile from './ComunicadoItemFile';
+import api from '../requests/apis';
 
 const handleCategoriaItem = (type) => {
   switch (type) {
@@ -23,6 +24,11 @@ const handleFormatDate = (date) => {
   return moment(parseDate).format('DD/MM/YYYY - HH[h]mm');
 };
 
+const handleOnClickDownload = (e, url) => {
+  e.stopPropagation();
+  api.downloadFile(url);
+};
+
 const ComunicadoDetailsItem = (props) => (
   <div className={`comunicados__item comunicados__item--no-pointer ${handleCategoriaItem(props.type).color}`}>
     <div className="comunicados__row">
@@ -30,7 +36,7 @@ const ComunicadoDetailsItem = (props) => (
       <span className="comunicados__id">{props.id}</span>
     </div>
     {props.files && props.files.length > 0 && props.files.map((file) => {
-      return <ComunicadoItemFile key={file.name} {...file} />;
+      return <ComunicadoItemFile handleOnClickDownload={handleOnClickDownload} key={file.name} {...file} />;
     })}
     <div className="comunicados__row">
       <span className="comunicados__type">{handleCategoriaItem(props.type).name}</span>
