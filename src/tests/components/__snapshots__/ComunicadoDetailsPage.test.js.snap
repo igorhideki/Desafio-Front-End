@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ComunicadoDetailsPage correctly 1`] = `
+<ComunicadoDetailsPage
+  match={
+    Object {
+      "params": Object {
+        "id": "2",
+      },
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <ComunicadoDetailsItem
+      date="2018-05-02 10:30"
+      description="Planos controle 5GB de internet 4G."
+      fullDescription="Ligações ilimitadas locais para todas as operadoras. Ligações ilimitadas pra fixos nacional e qualquer Vivo do Brasil com o código 15. SMS ilimitado para qualquer operadora do Brasil."
+      id={2}
+      seen={false}
+      title="Bônus Fevereiro"
+      type={1}
+    >
+      <div
+        className="comunicados__item comunicados__item--no-pointer comunicados__item--blue"
+      >
+        <div
+          className="comunicados__row"
+        >
+          <span
+            className="comunicados__title"
+          >
+            Bônus Fevereiro
+          </span>
+          <span
+            className="comunicados__id"
+          >
+            2
+          </span>
+        </div>
+        <div
+          className="comunicados__row"
+        >
+          <span
+            className="comunicados__type"
+          >
+            Força de Vendas
+          </span>
+          <span
+            className="comunicados__date"
+          >
+            02/05/2018 - 10h30
+          </span>
+        </div>
+        <div
+          className="mt-m"
+        >
+          <p
+            className="comunicados__subtitle"
+          >
+            Resumo:
+          </p>
+          <p
+            className="comunicados__description"
+          >
+            Planos controle 5GB de internet 4G.
+          </p>
+          <p
+            className="comunicados__subtitle"
+          >
+            Descrição:
+          </p>
+          <p
+            className="comunicados__description"
+          >
+            Ligações ilimitadas locais para todas as operadoras. Ligações ilimitadas pra fixos nacional e qualquer Vivo do Brasil com o código 15. SMS ilimitado para qualquer operadora do Brasil.
+          </p>
+        </div>
+      </div>
+    </ComunicadoDetailsItem>
+  </div>
+</ComunicadoDetailsPage>
+`;

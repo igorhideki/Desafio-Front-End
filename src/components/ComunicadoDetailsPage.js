@@ -27,7 +27,7 @@ class ComunicadoDetailsPage extends Component {
     return (
       <div className="container">
         {!this.state.isLoading
-          ? <ComunicadoDetailsItem comunicado={this.state.comunicado} />
+          ? <ComunicadoDetailsItem {...this.state.comunicado} />
           : <span><i className="fas fa-spinner fa-pulse mr-xs"></i> Aguarde, carregando...</span>
         }
       </div>
