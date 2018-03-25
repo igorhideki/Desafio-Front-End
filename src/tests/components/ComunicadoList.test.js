@@ -9,6 +9,6 @@ test('should render ComunicadosList correctly with provided data', () => {
 });
 
 test('should render ComunicadosList with empty data', () => {
-  const wrapper = shallow(<ComunicadoList  comunicados={[]} />);
+  const wrapper = shallow(<ComunicadoList comunicados={[]} />);
   expect(wrapper).toMatchSnapshot();
 });
