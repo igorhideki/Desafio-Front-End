@@ -3,13 +3,18 @@ import PropTypes from 'prop-types';
 import ComunicadoItem from './ComunicadoItem';
 
 const ComunicadoList = (props) => (
-  <ul className="comunicados">
-    {
-      props.comunicados && props.comunicados.map((comunicado) => (
-        <ComunicadoItem key={comunicado.id} {...comunicado}/>
-      ))
+  <div>
+    {props.comunicados.length > 0
+      && <ul className="comunicados">
+        {props.comunicados.map((comunicado) => (
+          <ComunicadoItem key={comunicado.id} {...comunicado}/>
+        ))}
+      </ul>
     }
-  </ul>
+    {props.comunicados.length === 0 
+      && <div className="comunicados__item">Nenhum comunicado encontrado.</div>
+    }
+  </div>
 );
 
 ComunicadoList.propTypes = {
