@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ComunicadoItem correctly 1`] = `
+<li
+  className="comunicados__item  comunicados__item--blue"
+  onClick={[Function]}
+>
+  <div
+    className="comunicados__row"
+  >
+    <span
+      className="comunicados__title"
+    >
+      Bônus Fevereiro
+    </span>
+    <span
+      className="comunicados__id"
+    >
+      2
+    </span>
+  </div>
+  <div
+    className="comunicados__row"
+  >
+    <span
+      className="comunicados__type"
+    >
+      Força de Vendas
+    </span>
+    <span
+      className="comunicados__date"
+    >
+      02/05/2018 - 10h30
+    </span>
+  </div>
+</li>
+`;
