@@ -14,7 +14,7 @@ class Header extends Component {
     this.setState(() => ({ isOpen: true }));
   }
 
-  handleCloseMenu() {
+  handleOnClickOutMenu() {
     this.setState(() => ({ isOpen: false }));
   }
 
@@ -22,23 +22,23 @@ class Header extends Component {
     return (
       <div>
         <header className="header">
-          <span onClick={() => this.handleOnClickMenu()} className="header__icon-menu"><i className="fas fa-bars fa-fw"></i></span>
+          <span id="menu-toggler" onClick={() => this.handleOnClickMenu()} className="header__icon-menu"><i className="fas fa-bars fa-fw"></i></span>
           <span className="header__title" >Comunicados</span>
           <span className="header__icon-search"><i className="fas fa-search fa-fw"></i></span>
         </header>
-        <nav className={`menu ${this.state.isOpen ? 'menu--open' : ''}`}>
+        <nav className={`menu${this.state.isOpen ? ' menu--open' : ''}`}>
           <div className="menu__brand">
             <span>Comunicados</span>
           </div>
           <ul className="menu__list">
             <li className="menu__item">
-              <NavLink className="menu__link" activeClassName="menu__link--active" to="/" onClick={() => this.handleCloseMenu()} exact>
+              <NavLink className="menu__link" activeClassName="menu__link--active" to="/" onClick={() => this.handleOnClickOutMenu()} exact>
                 <i className="fas fa-home fa-fw menu__icon-link"></i>
                 Home
               </NavLink>
             </li>
             <li className="menu__item">
-              <NavLink className="menu__link" activeClassName="menu__link--active" to="/about" onClick={() => this.handleCloseMenu()}>
+              <NavLink className="menu__link" activeClassName="menu__link--active" to="/about" onClick={() => this.handleOnClickOutMenu()}>
                 <i className="fas fa-info-circle fa-fw menu__icon-link"></i>
                 About
               </NavLink>
@@ -46,7 +46,8 @@ class Header extends Component {
           </ul>
         </nav>
         <div
-          className={`overlay ${this.state.isOpen ? 'overlay--visible' : ''}`}
+          id="overlay"
+          className={`overlay${this.state.isOpen ? ' overlay--visible' : ''}`}
           onClick={() => this.setState(() => ({ isOpen: false }))}
         ></div>
       </div>
