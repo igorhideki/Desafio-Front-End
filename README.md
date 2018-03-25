@@ -1,59 +1,66 @@
 # Desafio Front-End
-Você acaba de receber sua primeira tarefa: 😎 
-**Implementar a Listagem de Comunicados**
 
-A tarefa já passou pelo designer, que criou o seguinte protótipo:
-[Listagem de Comunicados - Protótipo](https://www.figma.com/file/YmxTthj1kDiJIXerYaSp6zkX/Desafio_Before) 🎨
+Projeto desenvolvido como solução do desafio proposto [Desafio Front-End](https://github.com/igorhideki/Desafio-Front-End/blob/dev/README-Desafio.md).
 
-Com base no protótipo, implemente a Listagem de Comunicados. Sua aplicação deverá consumir dados de uma api, para isso adicionamos junto ao projeto um servidor fake para devolver requisições nos endpoints:
-- `/comunicados` : devolve a lista de comunicados
-- `/tiposComunicados` : devolve os ids e os nomes das categorias de comunicados
+## Estrutura do projeto
 
-O servidor também servirá arquivos estáticos que deverão ser acessados quando o comunicado possuir arquivos (campo *files* do comunicado).
+Solução desenvolvida usado a biblioteca de criação de interfaces [ReactJS](https://reactjs.org/). O projeto está dividido da seguinte forma:
 
-### Descrição do módulo:
-A listagem de comunicados servirá como agregador de comunicados do sistema, hoje existem 4 categorias de comunicados:
-- Informativos SUN ![#FF9900](https://placehold.it/15/FF9900/000000?text=+) `#FF9900`  
-- Força de Vendas ![#56CCF2](https://placehold.it/15/56CCF2/000000?text=+) `#56CCF2`
-- Vivo Ligado ![#79C126](https://placehold.it/15/79C126/000000?text=+) `#79C126`  
-- Turbine Suas Vendas ![#660099](https://placehold.it/15/660099/000000?text=+) `#660099` 
+* `/` - Possui arquivos de configuração do projeto
+* `/src` - Possui os arquivos fontes como, scripts, folhas de estilos e testes
+* `/public` - Possui os arquivos de produção do projeto
+* `/endpoints` - Possui os arquivos para consumo da fake API
 
-O módulo deverá exibir todos os comunicados disponíveis para aquele usuário. O usuário poderá filtrar os comunicados através das categorias. Ao clicar em um comunicado o seu conteúdo deverá ser exibido e o mesmo deverá ser marcado como lido.
+### Scripts
 
-> será necessário fazer a tela de visualização do comunicado, você terá que usar suas noções de UI e UX para criar essa visualização!
+Os scripts deste projeto estão contidos na pasta `/src` e separados da seguinte forma:
 
-### Requisitos Obrigatórios
-- Não utilize um gerador de projeto (yeoman) ou cli de configuração (vue-cli, react-create-app etc)
-- O projeto deve ser criado com um framework Javascript orientado a componentes (Vue, React, Angular etc)
-- Sua aplicação deve consumir os dados fornecido pela api.
-- Utilize um linter de JS
-- Não use jQuery
+* `/components` - Possui scripts separados em arquivos com os nomes dos components
+* `/request` - Possui scripts responsáveis pelas chamadas realizadas na fake API
+* `/routers` - Possui scripts responsáveis pela configuração das rotas da aplicação
+* `/selectors` - Possui scripts responsáveis pela aplicação de filtros e seletores dos dados
 
-### Diferenciais
-- Utilize um pré-processador de CSS (Sass, Stylus, Less etc) ou estruture seu CSS com alguma metodologia (OOCSS, BEM, SMACSS etc)
-- Sua aplicação deve manter o estado consistente, ou seja, uma vez lido, um comunicado deverá ser marcado como lido e manter este estado. (Utilize alguma forma de storage, ou o próprio json-server para editar o comunicado)
-- Crie um passo-a-passo de como utilizar sua aplicação (scripts de inicialização, build etc)
-- Utilize ES6
-- Seu código deve ser coberto por testes de unidade, utilize qualquer framework de teste (Jest, Mocha, Jasmine etc)
+### Folhas de Estilo
 
-### Passo-a-passo
-1. Faça um **fork** deste repositório para sua conta pessoal do github
-2. Clone o projeto
-    ``git clone url``
-3. Instale as dependências
-    ``npm install``
-4. Inicie o servidor fake
-    ``npm run server``
+Este projeto utiliza o pré-processador [Sass](https://sass-lang.com/) para criação do CSS seguindo a metodologia [BEM (Block Element Modifier)](http://getbem.com/).
 
-Ao terminar faça um pull request! :octocat:
-> 💡 Caso tenha dúvida não deixe de perguntar
+A pasta `/styles` está contida na pasta `/src` e segue a seguinte estrutura:
 
-### Dicas
-- Confira os dados dos endpoints na url http://localhost:84/endpoint, alguns dados terão que ser tratados!
-- O módulo deverá ser responsivo para uma tela desktop, parta do princípio mobile first
-- Estruture bem o seu código e sua arquitetura
-- Pense sempre que alguém irá ler seu código e que os requisitos podem mudar
-- Teste!
+* `/` - Na raiz possui apenas arquivo de importação dos módulos de estilo
+* `/base` - Possui os arquivos usados como base dos estilos, regras de configuração, variáveis e regras de utilidades
+* `/components` - Possui os arquivos de estilos separados por components
 
-👊 Bom desafio!
+#### Ícones
 
+Os ícones utilizados são obtidos do conjunto de ferramentas de fontes e ícones [FontAwesome](https://fontawesome.com/).
+
+## Pré-requisitos
+
+É necessário ter [Node.js](https://nodejs.org/en/) instalado.
+
+## Instalação e execução
+
+1. Faça o clone do repositório e no terminal navegue até a pasta;
+2. Instale as dependências do projeto `npm install`;
+3. Rode primeiro a fake API para que aplicação possa consumir seus dados `npm run start:db`;
+4. Rode o servidor de desenvolvimento `npm run start`
+
+## Testes
+
+Os testes foram criados utilizando a [Jest](https://facebook.github.io/jest/) e [Enzyme](http://airbnb.io/enzyme/).
+
+Para rodar os teste utilize o comando `npm run test`.
+
+### Arquivos de teste
+
+Os scripts de teste estão organizados na pasta `/tests` que está contida na pasta `/src` e segue a seguinte estrutura:
+
+* `/` - Na raiz está o arquivo de setup da ferramenta Enzyme
+* `/components` - Possui os arquivos de testes separados por components e os snapshots de cada component
+* `/fixtures` - Possui arquivos com dados para utilizar na execução dos testes
+
+## Build
+
+Os arquivos para produção são gerados pelo comando `npm run build`.
+
+Para rodar o servidor com os arquivos gerados pelo build é necessário usar o comando `npm run start:dist`.
