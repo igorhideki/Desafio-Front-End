@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ComunicadoItemFile correctly 1`] = `
+<div
+  className="anexo"
+>
+  <span
+    className="anexo__icon"
+  >
+    <i
+      className="far fa-file-image"
+    />
+  </span>
+  <span
+    className="anexo__name"
+  >
+    Material de divulgação
+  </span>
+  <span
+    className="anexo__link"
+    onClick={[Function]}
+  >
+    <i
+      className="fas fa-cloud-download-alt"
+    />
+  </span>
+</div>
+`;
