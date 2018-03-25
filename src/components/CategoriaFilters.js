@@ -7,10 +7,9 @@ const CategoriaFilters = (props) => (
     <label className="filter__label">Categorias</label>
     {props.categorias && props.categorias.map((categoria) => {
       return (
-        <CategoriaFiltersItem 
+        <CategoriaFiltersItem
           key={categoria.type}
-          name={categoria.name}
-          type={categoria.type}
+          {...categoria}
           filterActive={props.filterActive}
           handleSelectCategoria={props.handleSelectCategoria}
         />

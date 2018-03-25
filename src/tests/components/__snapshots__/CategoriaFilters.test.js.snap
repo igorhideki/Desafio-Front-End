@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CategoriasFilters correctly 1`] = `
+<div
+  className="filter"
+>
+  <label
+    className="filter__label"
+  >
+    Categorias
+  </label>
+  <CategoriaFiltersItem
+    key="0"
+    name="Informativos SUN"
+    type={0}
+  />
+  <CategoriaFiltersItem
+    key="1"
+    name="Força de Vendas"
+    type={1}
+  />
+  <CategoriaFiltersItem
+    key="2"
+    name="Vivo Ligado"
+    type={2}
+  />
+  <CategoriaFiltersItem
+    key="3"
+    name="Turbine Suas Vendas"
+    type={3}
+  />
+</div>
+`;
