@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CategoriaFiltersItem correctly 1`] = `
+<span
+  className="filter__item "
+  onClick={[Function]}
+>
+  Força de Vendas
+</span>
+`;

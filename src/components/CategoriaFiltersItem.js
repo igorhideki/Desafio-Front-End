@@ -20,5 +20,4 @@ CategoriaFiltersItem.propTypes = {
   handleSelectCategoria: PropTypes.func  
 };
 
-
 export default CategoriaFiltersItem;
