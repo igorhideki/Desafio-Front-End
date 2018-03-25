@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import api from '../requests/apis';
 
 const handleAnexoTypeIcon = (type) => {
   const isImage = /.png$|.jpg$|.jpeg$|.gif$/;
@@ -22,7 +21,10 @@ const ComunicadoItemFile = (props) => (
     <span className="anexo__name">{props.name}</span>
     <span
       className="anexo__link"
-      onClick={() => api.downloadFile(props.url)}
+      onClick={(e) => {
+        e.stopPropagation();
+        props.handleOnClickDownload(e, props.url);
+      }}
     >
       <i className="fas fa-cloud-download-alt"></i>
     </span>
@@ -31,7 +33,8 @@ const ComunicadoItemFile = (props) => (
 
 ComunicadoItemFile.propTypes = {
   name: PropTypes.string,
-  url: PropTypes.string
+  url: PropTypes.string,
+  handleOnClickDownload: PropTypes.func
 };
 
 export default ComunicadoItemFile;
