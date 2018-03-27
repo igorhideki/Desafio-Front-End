@@ -42,8 +42,10 @@ class ComunicadosPage extends Component {
     return (
       <div className="container">
         {!this.state.isLoading
-          && <CategoriaFilters categorias={this.state.categorias} handleSelectCategoria={this.handleSelectCategoria} filterActive={this.state.filters.type}/>
-          && <ComunicadoList comunicados={selectComunicados(this.state.comunicados, this.state.filters)}/>
+          && <div>
+            <CategoriaFilters categorias={this.state.categorias} handleSelectCategoria={this.handleSelectCategoria} filterActive={this.state.filters.type}/>
+            <ComunicadoList comunicados={selectComunicados(this.state.comunicados, this.state.filters)}/>
+          </div>
         }
         {this.state.isLoading && <span><i className="fas fa-spinner fa-pulse mr-xs"></i> Aguarde, carregando...</span>}
       </div>
