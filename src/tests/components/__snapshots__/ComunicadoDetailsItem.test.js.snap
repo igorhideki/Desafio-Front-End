@@ -19,6 +19,7 @@ exports[`should render ComunicadoDetailsItem 1`] = `
     </span>
   </div>
   <ComunicadoItemFile
+    handleOnClickDownload={[Function]}
     key="Material de divulgação"
     name="Material de divulgação"
     type="image/*"
